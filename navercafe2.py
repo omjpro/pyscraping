@@ -7,10 +7,7 @@ res = requests.get(url, headers=headers)
 res.raise_for_status()
 soup = BeautifulSoup(res.text, "lxml")
 
-with open("nadocoding.html", "w", encoding="utf8") as f:
+with open("navercafe.html", "w", encoding="utf8") as f:
     f.write(res.text)
     
 
-
-# cafes = soup.find("ul", attrs={"class":"CafeList"}).find("p", attrs={"class":"cafe_introduction"})
-# print(cafes)
