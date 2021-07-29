@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 options = webdriver.ChromeOptions()
 options.add_experimental_option("excludeSwitches", ["enable-logging"])
 browser = webdriver.Chrome(options=options)
-headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"}
+headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36"}
 
 
 url = "https://section.cafe.naver.com/ca-fe/home/search/cafes?q=%EC%A3%BC%EC%A3%BC&p=1&od=2&th=20"

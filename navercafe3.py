@@ -1,4 +1,3 @@
-from os import name
 from selenium import webdriver
 
 browser = webdriver.Chrome()
