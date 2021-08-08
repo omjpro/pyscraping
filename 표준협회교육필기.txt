@@ -1,0 +1,95 @@
+데이터프레임정렬 
+1. 인덱스 기준
+df.sort.index(axis=숫자, ascending= 불리언)
+기준행(axis=0(행기준) 1(열기준),
+차순 ascending= True(오름차순), False(내림차순))
+묘
+2. 컬럼 기준
+df.sort_values('컬럼제목', ascending=불리언)
+기준컬럼 ('컬럼이름', ascending=불리언)
+여러개 컬럼 순차정렬 가능 
+df.sort_values(['1컬럼제목','2컬럼제목'], ascending=[불리언1, 불리언2])
+=> 두번째 정렬은 첫번째 정렬을 건들지않는범위에서 정렬
+
+데이터프레임 집계 => 결과float값으로나옴
+axis = 0(컬럼별), 1(인덱스별)
+count 개수(NaN제외) count(axis=0,1) 
+max 
+min
+np.sum
+df.mean(axis=0or1, skipna = 불리언) NaN무시?
+
+*b_avg = df['math'].mean() # df의 math컬럼 평균값
+df['math'].fillna(b_avg)  NaN있는 값을()으로 대체 
+
+np.median 중간값구하기 
+df.groupby('컬럼).aggregate([함수, n함수, x함수])
+df.groupby('컬럼).aggregate({'컬럼1:함수1,'컬럼2':함수2})
+df.groupby('컬럼').filter(함수)
+df.groupby('컬럼').apply(lambda x : x.max() - x.min())
+df.groupby('컬럼').get_group('필터링할데이터')
+
+fig,ax=plt.subplots()
+ax.plot(
+x,y,
+linestyle=" ",
+marker="",
+color=""
+label="내용"
+)
+ax.legend(
+loc = "위치",
+shadow=불리언
+fancybox=불리언
+borderpad=크기
+)
+x=np.linespace(시작, 끝, 간격)
+ax.set_xlim(시작, 끝) x축 차트범위
+ax_set_xlabel("내용")
+ax.bar(x,y)   #x=y 함수 바그래프
+ax.hist(변수, bins=나눌x축틱개수)
+
+#컬럼쪼개서 스플릿하기 
+변수=[] #리스트자료형만들기
+for 임시 in 자료['컬럼명']:
+변수.append(임시.split('기준')[인덱스번호]
+변수2.append(임시.split('기준')[인덱스번호]
+자료['신규생성컬럼명']=변수
+자료['컬럼명'].astype('int64') # int64 자료형으로 변환
+
+DataFrame().transpose() => 행렬전환? 알아보기!!
+
+
+쉽게 배우는 소프트웨어 공학 : 김치수
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
